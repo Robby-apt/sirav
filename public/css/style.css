@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Roboto&display=swap");
+* {
+  color: #fff;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: unset;
+  text-decoration: unset;
+}
+
+.section {
+  background-color: #011627;
+  min-height: 100vh;
+}
+
+#home {
+  background-image: url(/images/vania-shows-N1I6IgDOGJs-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.brand {
+  background-color: #fff;
+  border-radius: 0 0 2.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.brand img {
+  margin: 1.25rem 0.625rem 1.25rem 1.25rem;
+}
+
+.brand .brandName {
+  color: #011627;
+  font-family: Cookie, cursive;
+  font-size: 2.5rem;
+  margin: auto 1.25rem auto 0;
+}
+
+.navLinks {
+  margin: auto 1.25rem auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navLinks a {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.navLinks a:first-child {
+  color: #2ec4b6;
+}
+
+.navLinks .midLink {
+  margin: 0 1.25rem;
+}
+
+.navLinkIcons {
+  display: none;
+  margin: auto 1.25rem auto 0;
+}
+
+.navLinkIcons i {
+  font-size: 1.25rem;
+}
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 85%;
+  margin: auto 1.25rem;
+}
+
+.sublime {
+  color: rgba(46, 196, 182, 0.2);
+  font-size: 4rem;
+}
+
+.firstSublime {
+  margin: 0 auto 0 0;
+}
+
+.secondSublime {
+  margin: 0 0 0 auto;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+
+.name {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.service {
+  font-size: 3rem;
+  margin: 2.5rem auto;
+}
+
+.callToAction {
+  border: solid 0.3125rem #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 0.625rem 1.25rem;
+}
+
+.callToAction:hover {
+  background-color: #fff;
+  color: #011627;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 640px) {
+  .navLinks {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navLinks .midLink {
+    margin: 1.25rem 0;
+  }
+  .navLinkIcons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .sublime {
+    font-size: 2.5rem;
+    margin: 0 auto;
+  }
+  .name {
+    font-size: 3.5rem;
+  }
+  .service {
+    font-size: 2.5rem;
+  }
+  .callToAction {
+    font-size: 1.25rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

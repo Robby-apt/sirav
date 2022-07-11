@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Roboto&display=swap');
+
+// Global variables
+$primary-color: #fff;
+$secondary-color: rgba(46, 196, 182, 0.2);
+$primary-bg-color: #011627;
+$secondary-bg-color: rgba(255, 255, 255, 0.2);
+$primary-accent-color: #ff9f1c;
+$secondary-accent-color: #2ec4b6;
+
+// General styling
+* {
+	color: $primary-color;
+	font-family: Roboto, sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: unset;
+	text-decoration: unset;
+}
+
+.section {
+	background-color: $primary-bg-color;
+	min-height: 100vh;
+}
+
+// Link section stylesheets
+@import './home';
+@import './sample';
+@import './contact';
+@import './media-queries'
