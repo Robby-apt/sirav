@@ -143,7 +143,7 @@ nav {
 
 .name {
   font-size: 6rem;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .service {
@@ -166,6 +166,179 @@ nav {
   transition: 0.5s ease-in-out;
 }
 
+#contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.prompt,
+.conclusion {
+  padding: 0;
+  text-align: center;
+}
+
+.prompt {
+  margin: 1.25rem 0 auto 0;
+}
+
+.conclusion {
+  margin: auto 0;
+}
+
+.contactInfo {
+  background-image: url(/images/mohammad-metri-1oKxSKSOowE-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 60%;
+  height: 60vh;
+}
+
+.contactOverlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.socialMedia,
+.contactForm {
+  width: 50%;
+}
+
+.socialMedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.socialMedia .socialIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 5%;
+}
+
+.socialMedia .socialIcon i {
+  color: #2ec4b6;
+  font-size: 3.125rem;
+}
+
+.socialMedia .socialIcon a:not(:first-child) {
+  font-size: 2.25rem;
+  margin: auto auto auto 1.25rem;
+}
+
+.contactForm {
+  background-color: rgba(46, 196, 182, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contactForm form {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+}
+
+.contactForm form .inputSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contactForm form .inputSection:first-child, .contactForm form .inputSection:last-child {
+  margin: 0 !important;
+}
+
+.contactForm form .inputSection:not(:first-child), .contactForm form .inputSection:not(:last-child) {
+  margin: 0.625rem 0 !important;
+}
+
+.contactForm form .inputSection label {
+  font-size: 1.25rem;
+}
+
+.contactForm form .inputSection input,
+.contactForm form .inputSection textarea {
+  border: none;
+  color: #000;
+  font-size: 1.25rem;
+  padding: 0.3125rem 0.625rem;
+}
+
+.contactForm form .inputSection input {
+  border-radius: 1.25rem;
+}
+
+.contactForm form .inputSection textarea {
+  border-radius: 0.625rem;
+}
+
+.contactForm form button {
+  background: none;
+  border: 0.125rem solid #fff;
+  border-radius: 1.25rem;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0.625rem auto 0;
+  padding: 0.3125rem 0.625rem;
+}
+
+.contactForm form button:hover {
+  background-color: #fff;
+  color: #011627;
+}
+
+footer {
+  background-color: rgba(46, 196, 182, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto 0 0 0;
+  width: 100%;
+}
+
+footer p {
+  margin: auto;
+  padding: 0.625rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+footer p a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 @media (max-width: 640px) {
   .navLinks {
     display: none;
@@ -183,17 +356,120 @@ nav {
     display: flex;
   }
   .sublime {
-    font-size: 2.5rem;
+    font-size: 2rem !important;
     margin: 0 auto;
   }
   .name {
-    font-size: 3.5rem;
+    font-size: 2.5rem !important;
+  }
+  .service {
+    font-size: 2rem !important;
+  }
+  .callToAction {
+    font-size: 1.25rem;
+  }
+  .contactInfo {
+    width: 90%;
+  }
+}
+
+@media (max-width: 960px) {
+  #contact {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+  .prompt,
+  .conclusion {
+    margin: 1rem 0;
+  }
+  .contactInfo {
+    background: none;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+  .contactInfo .contactOverlay {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .socialMedia,
+  .contactForm {
+    width: 100%;
+    min-height: 422px;
+  }
+  .contactForm form {
+    margin: 1rem auto;
+  }
+  .socialMedia {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(/images/mohammad-metri-1oKxSKSOowE-unsplash.jpg);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/mohammad-metri-1oKxSKSOowE-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 1174px) {
+  .sublime {
+    font-size: 3rem;
+  }
+  .name {
+    font-size: 3rem;
   }
   .service {
     font-size: 2.5rem;
   }
-  .callToAction {
-    font-size: 1.25rem;
+  .contactInfo {
+    height: 75vh;
+  }
+  .socialMedia .socialIcon i {
+    font-size: 1.5rem !important;
+  }
+  .socialMedia .socialIcon a:not(:first-child) {
+    font-size: 1rem !important;
+  }
+  .contactForm form {
+    width: 85%;
+  }
+  .contactForm form .inputSection:not(:first-child), .contactForm form .inputSection:not(:last-child) {
+    margin: 0.3125rem 0 !important;
+  }
+  .contactForm form .inputSection label {
+    font-size: 1rem;
+  }
+  .contactForm form .inputSection input,
+  .contactForm form .inputSection textarea {
+    font-size: 1rem;
+  }
+  .contactForm form button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1630px) {
+  .socialMedia .socialIcon i {
+    font-size: 2.5rem;
+  }
+  .socialMedia .socialIcon a:not(:first-child) {
+    font-size: 1.5rem;
+  }
+  .contactForm form {
+    width: 85%;
+  }
+  .contactForm form .inputSection:not(:first-child), .contactForm form .inputSection:not(:last-child) {
+    margin: 0.3125rem 0 !important;
+  }
+  .contactForm form .inputSection label {
+    font-size: 1rem;
+  }
+  .contactForm form .inputSection input,
+  .contactForm form .inputSection textarea {
+    font-size: 1rem;
+  }
+  .contactForm form button {
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
