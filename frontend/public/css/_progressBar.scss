@@ -1,0 +1,110 @@
+.progress {
+	display: flex;
+	justify-content: space-between;
+
+	// custom style for progress bar
+	.progressBar {
+		appearance: none;
+		background-color: $primary-color;
+		border-radius: 0.625rem;
+		margin: auto;
+		position: relative;
+		width: 75%;
+		height: 0.25rem;
+		outline: none;
+
+		--bar-bg: $primary-color;
+		--seek-before-width: 0;
+		--seek-before-color: $secondary-accent-color;
+		--knobby: $secondary-accent-color;
+		--selectedKnobby: $secondary-accent-color;
+	}
+
+	/* progress bar - safari */
+	.progressBar::-webkit-slider-runnable-track {
+		background-color: $primary-color;
+		border-radius: 0.625rem;
+		position: relative;
+		width: 100%;
+		height: 0.3125rem;
+		outline: none;
+	}
+
+	/* progress bar - firefox */
+	.progressBar::-moz-range-track {
+		background-color: $primary-color;
+		border-radius: 10px;
+		position: relative;
+		width: 100%;
+		height: 0.3125rem;
+		outline: none;
+	}
+
+	.progressBar::-moz-focus-outer {
+		border: 0;
+	}
+
+	/* progress bar - chrome and safari */
+	.progressBar::before {
+		content: '';
+		height: 0.3125rem;
+		// width: var(--seek-before-width);
+		background-color: $secondary-accent-color;
+		border-top-left-radius: 0.625rem;
+		border-bottom-left-radius: 0.625rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		cursor: pointer;
+	}
+
+	/* progress bar - firefox */
+	.progressBar::-moz-range-progress {
+		background-color: $secondary-accent-color;
+		border-top-left-radius: 0.625rem;
+		border-bottom-left-radius: 0.625rem;
+		height: 0.3125rem;
+	}
+
+	/* knobby - chrome and safari */
+	.progressBar::-webkit-slider-thumb {
+		appearance: none;
+		-webkit-appearance: none;
+		height: 15px;
+		width: 15px;
+		border-radius: 50%;
+		border: none;
+		background-color: $secondary-accent-color;
+		cursor: pointer;
+		position: relative;
+		margin: -2px 0 0 0;
+		z-index: 3;
+		box-sizing: border-box;
+	}
+
+	/* knobby while dragging - chrome and safari */
+	.progressBar:active::-webkit-slider-thumb {
+		transform: scale(1.2);
+		background-color: $secondary-accent-color;
+	}
+
+	/* knobby - firefox */
+	.progressBar::-moz-range-thumb {
+		height: 15px;
+		width: 15px;
+		border-radius: 50%;
+		border: transparent;
+		background-color: $secondary-accent-color;
+		cursor: pointer;
+		position: relative;
+		z-index: 3;
+		box-sizing: border-box;
+	}
+
+	/* knobby while dragging - firefox */
+	.progressBar:active::-moz-range-thumb {
+		transform: scale(1.2);
+		background-color: $secondary-accent-color;
+	}
+}

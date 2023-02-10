@@ -1,0 +1,702 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Roboto&display=swap");
+* {
+  color: #fff;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: unset;
+  text-decoration: unset;
+}
+
+.section {
+  background-color: #011627;
+  min-height: 100vh;
+}
+
+#home {
+  background-image: url(/images/vania-shows-N1I6IgDOGJs-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand {
+  background-color: #fff;
+  border-radius: 0 0 2.5rem 0;
+  display: flex;
+}
+.brand img {
+  margin: 1.25rem 0.625rem 1.25rem 1.25rem;
+}
+.brand .brandName {
+  color: #011627;
+  font-family: Cookie, cursive;
+  font-size: 2.5rem;
+  margin: auto 1.25rem auto 0;
+}
+
+.navLinks {
+  margin: auto 1.25rem auto 0;
+  display: flex;
+}
+.navLinks a {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.navLinks a:first-child {
+  color: #2ec4b6;
+}
+.navLinks .midLink {
+  margin: 0 1.25rem;
+}
+
+.navLinksResponsive {
+  background-color: #011627;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  flex-direction: column;
+  margin: auto 0;
+  padding-right: 1.25rem !important;
+  position: absolute;
+  right: 0;
+  top: 4.5rem;
+}
+.navLinksResponsive a {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.navLinksResponsive a:first-child {
+  color: #2ec4b6;
+}
+.navLinksResponsive .midLink {
+  margin: 1.25rem 0;
+}
+
+.navLinkIcons {
+  display: none;
+  margin: auto 1.25rem auto 0;
+}
+.navLinkIcons i {
+  font-size: 1.25rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  margin: auto 1.25rem;
+}
+
+.sublime {
+  color: rgba(46, 196, 182, 0.2);
+  font-size: 4rem;
+}
+
+.firstSublime {
+  margin: 0 auto 0 0;
+}
+
+.secondSublime {
+  margin: 0 0 0 auto;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.name {
+  font-size: 6rem;
+  margin: 0 auto;
+}
+
+.service {
+  font-size: 3rem;
+  margin: 2.5rem auto;
+}
+
+.callToAction {
+  border: solid 0.3125rem #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 0.625rem 1.25rem;
+}
+.callToAction:hover {
+  background-color: #fff;
+  color: #011627;
+  transition: 0.5s ease-in-out;
+}
+
+#sample {
+  display: flex;
+}
+
+.currentlyPlaying {
+  background-color: rgba(46, 196, 182, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 50vw;
+}
+.currentlyPlaying .sectionTitle {
+  margin: 1rem auto 1rem 1.7rem;
+}
+.currentlyPlaying .mediaSection {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  margin: auto auto 5%;
+  width: 94%;
+  height: 94vh;
+}
+.currentlyPlaying .mediaSection .mediaOverlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.beatInfoAndControls {
+  display: flex;
+  flex-direction: column;
+  margin: auto auto 7.5% auto;
+  width: 90%;
+}
+.beatInfoAndControls .beatInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+.beatInfoAndControls .beatInfo p {
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+.beatInfoAndControls .beatInfo div {
+  display: flex;
+  margin: auto 0;
+}
+.beatInfoAndControls .beatInfo div i {
+  color: #ff9f1c;
+}
+.beatInfoAndControls .beatInfo div i:not(:last-child) {
+  margin-right: 0.25rem;
+}
+.beatInfoAndControls .progress {
+  display: flex;
+  justify-content: space-between;
+  /* progress bar - safari */
+  /* progress bar - firefox */
+  /* progress bar - chrome and safari */
+  /* progress bar - firefox */
+  /* knobby - chrome and safari */
+  /* knobby while dragging - chrome and safari */
+  /* knobby - firefox */
+  /* knobby while dragging - firefox */
+}
+.beatInfoAndControls .progress .progressBar {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  border-radius: 0.625rem;
+  margin: auto;
+  position: relative;
+  width: 75%;
+  height: 0.25rem;
+  outline: none;
+  --bar-bg: $primary-color;
+  --seek-before-width: 0;
+  --seek-before-color: $secondary-accent-color;
+  --knobby: $secondary-accent-color;
+  --selectedKnobby: $secondary-accent-color;
+}
+.beatInfoAndControls .progress .progressBar::-webkit-slider-runnable-track {
+  background-color: #fff;
+  border-radius: 0.625rem;
+  position: relative;
+  width: 100%;
+  height: 0.3125rem;
+  outline: none;
+}
+.beatInfoAndControls .progress .progressBar::-moz-range-track {
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+  height: 0.3125rem;
+  outline: none;
+}
+.beatInfoAndControls .progress .progressBar::-moz-focus-outer {
+  border: 0;
+}
+.beatInfoAndControls .progress .progressBar::before {
+  content: "";
+  height: 0.3125rem;
+  background-color: #2ec4b6;
+  border-top-left-radius: 0.625rem;
+  border-bottom-left-radius: 0.625rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+.beatInfoAndControls .progress .progressBar::-moz-range-progress {
+  background-color: #2ec4b6;
+  border-top-left-radius: 0.625rem;
+  border-bottom-left-radius: 0.625rem;
+  height: 0.3125rem;
+}
+.beatInfoAndControls .progress .progressBar::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: #2ec4b6;
+  cursor: pointer;
+  position: relative;
+  margin: -2px 0 0 0;
+  z-index: 3;
+  box-sizing: border-box;
+}
+.beatInfoAndControls .progress .progressBar:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+  background-color: #2ec4b6;
+}
+.beatInfoAndControls .progress .progressBar::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: transparent;
+  background-color: #2ec4b6;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  box-sizing: border-box;
+}
+.beatInfoAndControls .progress .progressBar:active::-moz-range-thumb {
+  transform: scale(1.2);
+  background-color: #2ec4b6;
+}
+.beatInfoAndControls .customControls {
+  display: flex;
+  position: relative;
+}
+.beatInfoAndControls .customControls i {
+  color: #ff9f1c;
+  font-size: 2.5rem;
+  margin: auto 0;
+}
+.beatInfoAndControls .customControls i:first-child:not(.fa-backward-fast) {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.beatInfoAndControls .customControls i:last-child:not(.fa-forward-fast) {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+.beatInfoAndControls .customControls i:hover {
+  cursor: pointer;
+}
+.beatInfoAndControls .customControls .centreControls {
+  display: flex;
+  margin: 0 auto;
+}
+.beatInfoAndControls .customControls .centreControls i {
+  color: #ff9f1c;
+  font-size: 2.5rem;
+  margin: auto 0;
+}
+.beatInfoAndControls .customControls .centreControls i:hover {
+  cursor: pointer;
+}
+.beatInfoAndControls .customControls .centreControls .playPause {
+  font-size: 3.125rem;
+  margin: 0 2.5rem;
+}
+
+.otherBeats {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+.otherBeats .sectionTitle {
+  margin: 1rem auto 1rem;
+}
+.otherBeats .beatList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto auto 5%;
+  width: 80%;
+  height: 90.18vh;
+}
+
+.beatItem {
+  background-color: rgba(253, 255, 252, 0.2);
+  display: flex;
+  margin: 0 auto;
+  height: 20%;
+  width: 95%;
+}
+.beatItem .listIcon {
+  font-size: 1.25rem;
+  margin: auto 1.25rem;
+}
+.beatItem img {
+  width: 35%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.beatItem .beatInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+  height: 100%;
+}
+.beatItem .beatInfo div {
+  display: flex;
+}
+.beatItem .beatInfo div i {
+  color: #ff9f1c;
+}
+.beatItem .beatInfo div i:not(:first-child) {
+  margin-left: 0.25rem;
+}
+.beatItem .playBtn {
+  color: #ff9f1c;
+  font-size: 2rem;
+  margin: auto 1.25rem auto auto;
+}
+.beatItem .playBtn:hover {
+  cursor: pointer;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.prompt,
+.conclusion {
+  padding: 0;
+  text-align: center;
+}
+
+.prompt {
+  margin: 1.25rem 0 auto 0;
+}
+
+.conclusion {
+  margin: auto 0;
+}
+
+.contactInfo {
+  background-image: url(/images/mohammad-metri-1oKxSKSOowE-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  margin: 0 auto;
+  width: 60%;
+  height: 60vh;
+}
+
+.contactOverlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.socialMedia,
+.contactForm {
+  width: 50%;
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.socialMedia .socialIcon {
+  display: flex;
+  margin: 0 5%;
+}
+.socialMedia .socialIcon i {
+  color: #2ec4b6;
+  font-size: 3.125rem;
+}
+.socialMedia .socialIcon a:not(:first-child) {
+  font-size: 2.25rem;
+  margin: auto auto auto 1.25rem;
+}
+
+.contactForm {
+  background-color: rgba(46, 196, 182, 0.2);
+  display: flex;
+}
+.contactForm form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.contactForm form .inputSection {
+  display: flex;
+  flex-direction: column;
+}
+.contactForm form .inputSection:first-child, .contactForm form .inputSection:last-child {
+  margin: 0 !important;
+}
+.contactForm form .inputSection:not(:first-child), .contactForm form .inputSection:not(:last-child) {
+  margin: 0.625rem 0 !important;
+}
+.contactForm form .inputSection label {
+  font-size: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+.contactForm form .inputSection input,
+.contactForm form .inputSection textarea {
+  border: none;
+  color: #000;
+  font-size: 1.25rem;
+  padding: 0.3125rem 0.625rem;
+}
+.contactForm form .inputSection input {
+  border-radius: 1.25rem;
+}
+.contactForm form .inputSection textarea {
+  border-radius: 0.625rem;
+}
+.contactForm form button {
+  background: none;
+  border: 0.125rem solid #fff;
+  border-radius: 1.25rem;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0.625rem auto 0;
+  padding: 0.3125rem 0.625rem;
+}
+.contactForm form button:hover {
+  background-color: #fff;
+  color: #011627;
+}
+
+footer {
+  background-color: rgba(46, 196, 182, 0.2);
+  display: flex;
+  margin: auto 0 0 0;
+  width: 100%;
+}
+footer p {
+  margin: auto;
+  padding: 0.625rem 0;
+  text-align: center;
+  width: 100%;
+}
+footer p a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  nav {
+    position: relative;
+  }
+  .navLinks {
+    display: none;
+  }
+  .navLinksResponsive {
+    display: flex;
+  }
+  .navLinkIcons {
+    display: flex;
+  }
+  .sublime {
+    font-size: 2rem !important;
+    margin: 0 auto;
+  }
+  .name {
+    font-size: 2.5rem !important;
+  }
+  .service {
+    font-size: 2rem !important;
+  }
+  .callToAction {
+    font-size: 1.25rem;
+  }
+  .contactInfo {
+    width: 90%;
+  }
+}
+@media (max-width: 960px) {
+  #contact {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+  .prompt,
+.conclusion {
+    margin: 1rem 0;
+  }
+  .contactInfo {
+    background: none;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+  .contactInfo .contactOverlay {
+    flex-direction: column-reverse;
+  }
+  .socialMedia,
+.contactForm {
+    width: 100%;
+    min-height: 422px;
+  }
+  .contactForm form {
+    margin: 1rem auto;
+  }
+  .socialMedia {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/mohammad-metri-1oKxSKSOowE-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media (max-width: 1048px) {
+  #sample {
+    flex-direction: column;
+  }
+  .currentlyPlaying,
+.otherBeats {
+    margin: 0 auto;
+    width: 70vw;
+    min-width: 450px;
+  }
+  .currentlyPlaying {
+    height: 80vh;
+  }
+  .currentlyPlaying .sectionTitle {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .currentlyPlaying .customControls i {
+    font-size: 2rem !important;
+  }
+  .currentlyPlaying .customControls .centreControls i {
+    font-size: 1.5rem !important;
+  }
+  .currentlyPlaying .customControls .centreControls .playPause {
+    font-size: 2.5rem !important;
+  }
+  .otherBeats .beatList {
+    width: 100%;
+  }
+  .otherBeats .beatList .beatItem {
+    width: 100%;
+  }
+  .otherBeats .beatList .beatItem img {
+    width: 30%;
+    min-width: 135px;
+  }
+  .contactInfo {
+    width: 70vw;
+    min-width: 450px;
+  }
+}
+@media (max-width: 1174px) {
+  .sublime {
+    font-size: 3rem;
+  }
+  .name {
+    font-size: 3rem;
+  }
+  .service {
+    font-size: 2.5rem;
+  }
+  .contactInfo {
+    height: 75vh;
+  }
+  .socialMedia .socialIcon i {
+    font-size: 2.5rem !important;
+  }
+  .socialMedia .socialIcon a:not(:first-child) {
+    font-size: 1.5rem !important;
+  }
+  .contactForm form {
+    width: 85%;
+  }
+  .contactForm form .inputSection:not(:first-child), .contactForm form .inputSection:not(:last-child) {
+    margin: 0.3125rem 0 !important;
+  }
+  .contactForm form .inputSection label {
+    font-size: 1rem;
+  }
+  .contactForm form .inputSection input,
+.contactForm form .inputSection textarea {
+    font-size: 1rem;
+  }
+  .contactForm form button {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1630px) {
+  .socialMedia .socialIcon i {
+    font-size: 2.5rem;
+  }
+  .socialMedia .socialIcon a:not(:first-child) {
+    font-size: 1.5rem;
+  }
+  .contactForm form {
+    width: 85%;
+  }
+  .contactForm form .inputSection:not(:first-child), .contactForm form .inputSection:not(:last-child) {
+    margin: 0.3125rem 0 !important;
+  }
+  .contactForm form .inputSection label {
+    font-size: 1rem;
+  }
+  .contactForm form .inputSection input,
+.contactForm form .inputSection textarea {
+    font-size: 1rem;
+  }
+  .contactForm form button {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 640px) {
+  .navLinksResponsive {
+    display: none !important;
+  }
+}/*# sourceMappingURL=style.css.map */

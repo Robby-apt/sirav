@@ -1,0 +1,258 @@
+// first breakpoint
+@media (max-width: 640px) {
+	// home section
+	nav {
+		position: relative;
+	}
+
+	.navLinks {
+		display: none;
+	}
+
+	.navLinksResponsive {
+		display: flex;
+	}
+
+	.navLinkIcons {
+		display: flex;
+	}
+
+	.sublime {
+		font-size: 2rem !important;
+		margin: 0 auto;
+	}
+
+	.name {
+		font-size: 2.5rem !important;
+	}
+
+	.service {
+		font-size: 2rem !important;
+	}
+
+	.callToAction {
+		font-size: 1.25rem;
+	}
+
+	// contact section
+	.contactInfo {
+		width: 90%;
+	}
+}
+
+// second breakpoint
+@media (max-width: 960px) {
+	// contact section
+	#contact {
+		height: fit-content !important;
+	}
+
+	.prompt,
+	.conclusion {
+		margin: 1rem 0;
+	}
+
+	.contactInfo {
+		background: none;
+		height: fit-content !important;
+
+		.contactOverlay {
+			flex-direction: column-reverse;
+		}
+	}
+
+	.socialMedia,
+	.contactForm {
+		width: 100%;
+		min-height: 422px;
+	}
+
+	.contactForm {
+		form {
+			margin: 1rem auto;
+		}
+	}
+
+	.socialMedia {
+		background-image: linear-gradient(
+				0deg,
+				rgba(0, 0, 0, 0.6),
+				rgba(0, 0, 0, 0.6)
+			),
+			url(/images/mohammad-metri-1oKxSKSOowE-unsplash.jpg);
+		background-position: center;
+		background-size: cover;
+	}
+}
+
+// third breakpoint
+@media (max-width: 1048px) {
+	#sample {
+		flex-direction: column;
+	}
+
+	.currentlyPlaying,
+	.otherBeats {
+		margin: 0 auto;
+		width: 70vw;
+		min-width: 450px;
+	}
+
+	.currentlyPlaying {
+		height: 80vh;
+
+		.sectionTitle {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+		}
+
+		.customControls {
+			i {
+				font-size: 2rem !important;
+			}
+
+			.centreControls {
+				i {
+					font-size: 1.5rem !important;
+				}
+
+				.playPause {
+					font-size: 2.5rem !important;
+				}
+			}
+		}
+	}
+
+	.otherBeats {
+		.beatList {
+			width: 100%;
+
+			.beatItem {
+				width: 100%;
+
+				img {
+					width: 30%;
+					min-width: 135px;
+				}
+			}
+		}
+	}
+
+	.contactInfo {
+		width: 70vw;
+		min-width: 450px;
+	}
+}
+
+// fourth breakpoint
+@media (max-width: 1174px) {
+	// home section
+	.sublime {
+		font-size: 3rem;
+	}
+
+	.name {
+		font-size: 3rem;
+	}
+
+	.service {
+		font-size: 2.5rem;
+	}
+
+	// contact section
+	.contactInfo {
+		height: 75vh;
+	}
+
+	.socialMedia {
+		.socialIcon {
+			i {
+				font-size: 2.5rem !important;
+			}
+
+			a {
+				&:not(:first-child) {
+					font-size: 1.5rem !important;
+				}
+			}
+		}
+	}
+
+	.contactForm {
+		form {
+			width: 85%;
+
+			.inputSection {
+				&:not(:first-child),
+				&:not(:last-child) {
+					margin: 0.3125rem 0 !important;
+				}
+
+				label {
+					font-size: 1rem;
+				}
+
+				input,
+				textarea {
+					font-size: 1rem;
+				}
+			}
+
+			button {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+// fifth breakpoint
+@media (max-width: 1630px) {
+	// contact section
+	.socialMedia {
+		.socialIcon {
+			i {
+				font-size: 2.5rem;
+			}
+
+			a {
+				&:not(:first-child) {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+
+	.contactForm {
+		form {
+			width: 85%;
+
+			.inputSection {
+				&:not(:first-child),
+				&:not(:last-child) {
+					margin: 0.3125rem 0 !important;
+				}
+
+				label {
+					font-size: 1rem;
+				}
+
+				input,
+				textarea {
+					font-size: 1rem;
+				}
+			}
+
+			button {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+
+// Navbar important
+@media (min-width: 640px) {
+	.navLinksResponsive {
+		display: none !important;
+	}
+}

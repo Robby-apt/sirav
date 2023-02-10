@@ -1,0 +1,143 @@
+#home {
+	background-image: url(/images/vania-shows-N1I6IgDOGJs-unsplash.jpg);
+	background-position: center;
+	background-size: cover;
+	display: flex;
+}
+
+.overlay {
+	background-color: rgba(0, 0, 0, 0.6);
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100%;
+}
+
+// Nav styling
+nav {
+	// background-color: blue;
+	display: flex;
+	justify-content: space-between;
+}
+
+.brand {
+	background-color: $primary-color;
+	border-radius: 0 0 2.5rem 0;
+	display: flex;
+
+	img {
+		margin: 1.25rem 0.625rem 1.25rem 1.25rem;
+	}
+
+	.brandName {
+		color: $primary-bg-color;
+		font-family: Cookie, cursive;
+		font-size: 2.5rem;
+		margin: auto 1.25rem auto 0;
+	}
+}
+
+.navLinks {
+	margin: auto 1.25rem auto 0;
+	display: flex;
+
+	a {
+		font-size: 1.25rem;
+		font-weight: bold;
+
+		&:first-child {
+			color: $secondary-accent-color;
+		}
+	}
+
+	.midLink {
+		margin: 0 1.25rem;
+	}
+}
+
+.navLinksResponsive {
+	background-color: $primary-bg-color;
+    background-color: rgba(0, 0, 0, 0.6);
+	display: none;
+	flex-direction: column;
+	margin: auto 0;
+	padding-right: 1.25rem !important;
+	position: absolute;
+	right: 0;
+	top: 4.5rem;
+
+	a {
+		font-size: 1.25rem;
+		font-weight: bold;
+
+		&:first-child {
+			color: $secondary-accent-color;
+		}
+	}
+
+	.midLink {
+		margin: 1.25rem 0;
+	}
+}
+
+.navLinkIcons {
+	display: none;
+	margin: auto 1.25rem auto 0;
+
+	i {
+		font-size: 1.25rem;
+	}
+}
+
+// Intro styling
+.intro {
+	// background-color: blue;
+	display: flex;
+	flex-direction: column;
+	height: 85%;
+	margin: auto 1.25rem;
+}
+
+.sublime {
+	color: $secondary-color;
+	font-size: 4rem;
+}
+
+.firstSublime {
+	margin: 0 auto 0 0;
+}
+
+.secondSublime {
+	margin: 0 0 0 auto;
+}
+
+.about {
+	// background-color: blue;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+
+.name {
+	font-size: 6rem;
+	margin: 0 auto;
+}
+
+.service {
+	font-size: 3rem;
+	margin: 2.5rem auto;
+}
+
+.callToAction {
+	border: solid 0.3125rem $primary-color;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 0 auto;
+	padding: 0.625rem 1.25rem;
+
+	&:hover {
+		background-color: $primary-color;
+		color: $primary-bg-color;
+		transition: 0.5s ease-in-out;
+	}
+}
