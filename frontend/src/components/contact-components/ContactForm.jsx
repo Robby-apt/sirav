@@ -20,7 +20,7 @@ function ContactForm() {
 		let dataBody = JSON.stringify(contactInfo);
 
 		try {
-            const url = `http://localhost/3001`;
+            const url = `http://localhost:3001`;
 			let res = await fetch(url, {
 				method: 'POST',
 				headers: { 'content-type': 'application/json' },

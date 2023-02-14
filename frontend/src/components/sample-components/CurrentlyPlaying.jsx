@@ -20,32 +20,59 @@ function CurrentlyPlaying(props) {
 	// ref for custom progress bar
 	const progressBar = useRef();
 
+	// ref for animation on progress bar
+	const animationRef = useRef();
+
 	// console.log(musicPlaying.current.duration);
 
 	// state variables for current time and duration
 	const [beatDuration, setBeatDuration] = useState(0);
 	const [beatCurrentTime, setBeatCurrentTime] = useState(0);
 
-	useEffect(() => {
-		const durationSeconds = Math.ceil(musicPlaying.current.duration);
-        console.log(durationSeconds);
-		setBeatDuration(durationSeconds);
-		progressBar.current.max = durationSeconds;
+	useEffect(
+		() => {
+			const durationSeconds = Math.ceil(musicPlaying.current.duration);
+			// console.log(durationSeconds);
+			setBeatDuration(durationSeconds);
+			progressBar.current.max = durationSeconds;
 
+			progressBar.current.style.setProperty(
+				`--seek-before-width`,
+				`${(progressBar.current.value / beatDuration) * 100}%`
+			);
+
+			setBeatCurrentTime(progressBar.current.value);
+		}
+		// ,[
+		// 	musicPlaying?.current?.loadedmetadata,
+		// 	musicPlaying?.current?.readyState,
+		// ]
+	);
+
+	// config of progress bar animation
+
+	const changePlayerCurrentTime = () => {
 		progressBar.current.style.setProperty(
 			`--seek-before-width`,
 			`${(progressBar.current.value / beatDuration) * 100}%`
 		);
-
 		setBeatCurrentTime(progressBar.current.value);
-	}, [
-		musicPlaying?.current?.loadedmetadata,
-		musicPlaying?.current?.readyState,
-	]);
+	};
 
 	const changeRange = () => {
 		musicPlaying.current.currentTime = progressBar.current.value;
+		changePlayerCurrentTime();
 	};
+
+	const whilePlaying = () => {
+		progressBar.current.value = musicPlaying.current.currentTime;
+		changePlayerCurrentTime();
+		animationRef.current = requestAnimationFrame(whilePlaying);
+	};
+
+	props.isPlaying
+		? (animationRef.current = requestAnimationFrame(whilePlaying))
+		: cancelAnimationFrame(animationRef.current);
 
 	return (
 		<div className="currentlyPlaying">
@@ -61,6 +88,7 @@ function CurrentlyPlaying(props) {
 							<BeatAudio
 								playingBeat={playingBeat}
 								musicPlaying={musicPlaying}
+								setBeatDuration={setBeatDuration}
 							/>
 							<BeatTimeAndProgress
 								musicPlaying={musicPlaying}

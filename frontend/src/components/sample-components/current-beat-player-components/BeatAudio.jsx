@@ -9,6 +9,9 @@ function BeatAudio(props) {
 			controls
 			preload="metadata"
 			ref={props.musicPlaying}
+            onLoadedMetadata={()=>{
+                props.setBeatDuration(props.musicPlaying?.duration)
+            }}
 		/>
 	);
 }

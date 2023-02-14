@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function BeatTimeAndProgress(props) {
 	// const {
@@ -11,11 +11,11 @@ function BeatTimeAndProgress(props) {
 	let convertTime = (time) => {
 		let mins = Math.floor(time / 60);
 		if (mins < 10) {
-			mins = `0${String(mins)}`;
+			mins = `0${mins}`;
 		}
 		let secs = Math.floor(time % 60);
 		if (secs < 10) {
-			secs = `0${String(secs)}`;
+			secs = `0${secs}`;
 		}
 
 		return `${mins}:${secs}`;
@@ -30,9 +30,7 @@ function BeatTimeAndProgress(props) {
 				ref={props.progressBar}
 				// defaultValue={props.beatCurrentTime}
 				defaultValue={0}
-				onChange={() => {
-					props.changeRange();
-				}}
+				onChange={props.changeRange}
 			/>
 			<p>
 				{props.beatDuration &&

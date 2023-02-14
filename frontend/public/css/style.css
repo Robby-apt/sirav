@@ -562,17 +562,15 @@ footer p a:hover {
 }
 @media (max-width: 960px) {
   #contact {
-    height: -webkit-fit-content !important;
     height: -moz-fit-content !important;
     height: fit-content !important;
   }
   .prompt,
-.conclusion {
+  .conclusion {
     margin: 1rem 0;
   }
   .contactInfo {
     background: none;
-    height: -webkit-fit-content !important;
     height: -moz-fit-content !important;
     height: fit-content !important;
   }
@@ -580,7 +578,7 @@ footer p a:hover {
     flex-direction: column-reverse;
   }
   .socialMedia,
-.contactForm {
+  .contactForm {
     width: 100%;
     min-height: 422px;
   }
@@ -598,7 +596,7 @@ footer p a:hover {
     flex-direction: column;
   }
   .currentlyPlaying,
-.otherBeats {
+  .otherBeats {
     margin: 0 auto;
     width: 70vw;
     min-width: 450px;
@@ -664,7 +662,7 @@ footer p a:hover {
     font-size: 1rem;
   }
   .contactForm form .inputSection input,
-.contactForm form .inputSection textarea {
+  .contactForm form .inputSection textarea {
     font-size: 1rem;
   }
   .contactForm form button {
@@ -688,7 +686,7 @@ footer p a:hover {
     font-size: 1rem;
   }
   .contactForm form .inputSection input,
-.contactForm form .inputSection textarea {
+  .contactForm form .inputSection textarea {
     font-size: 1rem;
   }
   .contactForm form button {
