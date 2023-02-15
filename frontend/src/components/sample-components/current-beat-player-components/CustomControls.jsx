@@ -59,7 +59,7 @@ function CustomControls(props) {
 					type="range"
 					name="volume"
 					id="volume"
-                    className="volumeBar"
+					className="volumeBar"
 					value={props.playerVolume}
 					onChange={handleVolumeChange}
 				/>

@@ -1,20 +1,48 @@
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
 const app = express();
 const cors = require('cors');
 const port = process.env.PORT || 3001;
 
+// express app dependancies
 const appUsage = [
-    bodyParser.urlencoded({ extended: true }),
-    bodyParser.json(),
-    cors()
+	bodyParser.urlencoded({ extended: true }),
+	bodyParser.json(),
+	cors(),
 ];
 
 app.use(appUsage);
 
+// nodemailer config
+const transporter = nodemailer.createTransport({
+	service: 'gmail',
+	host: 'smtp.gmail.com',
+	port: 465,
+	secure: true,
+	auth: {
+		user: process.env.SENDER,
+		pass: process.env.PASSWORD,
+	},
+});
+
 app.post('/', (req, res) => {
-    console.log(req.body);
+	const { name, email, message } = req.body;
+
+	const mailOptions = {
+		from: process.env.SENDER,
+		to: process.env.RECEIVER,
+		subject: `Message from website contact form`,
+		html: `<h1>${name}</h1>
+        <h2>${email}</h2>
+        <p>${message}</p>`,
+	};
+
+    transporter.sendMail(mailOptions, (err, info) => {
+		let output = err || info.response;
+		console.log(output);
+	});
 });
 
 app.listen(port, () => {

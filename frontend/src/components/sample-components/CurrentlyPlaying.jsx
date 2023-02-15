@@ -45,15 +45,23 @@ function CurrentlyPlaying(props) {
 			);
 
 			setBeatCurrentTime(progressBar.current.value);
-		},[beatDuration]
+		},
+		[beatDuration]
 		// ,[
 		// 	musicPlaying?.current?.loadedmetadata,
 		// 	musicPlaying?.current?.readyState,
 		// ]
 	);
 
-	// config of progress bar animation
+	// function to reset player to 00:00 when it reaches the end of the song
+	useEffect(() => {
+		if (beatCurrentTime == beatDuration) {
+			stopBeat(musicPlaying.current);
+			props.setPlaying(false);
+		}
+	}, [beatCurrentTime]);
 
+	// config of progress bar animation
 	const changePlayerCurrentTime = () => {
 		progressBar.current.style.setProperty(
 			`--seek-before-width`,
@@ -105,7 +113,7 @@ function CurrentlyPlaying(props) {
 								setPlaying={props.setPlaying}
 								playerVolume={playerVolume}
 								setPlayerVolume={setPlayerVolume}
-                                musicPlaying={musicPlaying}
+								musicPlaying={musicPlaying}
 								rewindBeat={() =>
 									rewindBeat(musicPlaying.current)
 								}
