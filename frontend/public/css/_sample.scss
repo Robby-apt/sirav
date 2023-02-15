@@ -116,6 +116,30 @@
 				margin: 0 2.5rem;
 			}
 		}
+
+		.volumeControl {
+			// background-color: antiquewhite;
+			display: flex;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translate(0, -50%);
+			width: 20%;
+			min-width: 100px;
+
+			i {
+				// display: none;
+				margin: auto 1.25rem auto 0;
+			}
+
+			input {
+				margin: auto 0 auto auto;
+				width: 60%;
+			}
+
+            // import volume bar styling
+            @import './volumeBar';
+		}
 	}
 }
 

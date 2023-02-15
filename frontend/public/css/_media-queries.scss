@@ -42,6 +42,31 @@
 
 // second breakpoint
 @media (max-width: 960px) {
+	// sample section
+	.beatInfoAndControls {
+		.customControls {
+			.centreControls {
+				.playPause {
+					margin: 0 1.5rem;
+				}
+			}
+
+			.volumeControl {
+				min-width: auto;
+				width: 75px;
+
+				i {
+					display: none;
+				}
+
+				input {
+					margin: auto 0;
+					width: 100% !important;
+				}
+			}
+		}
+	}
+
 	// contact section
 	#contact {
 		height: fit-content !important;
@@ -105,22 +130,6 @@
 			margin-left: auto;
 			margin-right: auto;
 			text-align: center;
-		}
-
-		.customControls {
-			i {
-				font-size: 2rem !important;
-			}
-
-			.centreControls {
-				i {
-					font-size: 1.5rem !important;
-				}
-
-				.playPause {
-					font-size: 2.5rem !important;
-				}
-			}
 		}
 	}
 
@@ -208,6 +217,36 @@
 
 // fifth breakpoint
 @media (max-width: 1630px) {
+	// sample section
+	.beatInfoAndControls {
+		.customControls {
+			i {
+				font-size: 1.5rem;
+				margin: auto 0;
+			}
+
+			.centreControls {
+				i {
+					font-size: 1.5rem;
+				}
+
+				.playPause {
+					margin: 0 1.5rem;
+
+					i {
+						font-size: 1.5rem;
+					}
+				}
+			}
+
+			.volumeControl {
+				input {
+					width: 55%;
+				}
+			}
+		}
+	}
+
 	// contact section
 	.socialMedia {
 		.socialIcon {

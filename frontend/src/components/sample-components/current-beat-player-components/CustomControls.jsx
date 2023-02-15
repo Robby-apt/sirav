@@ -1,6 +1,12 @@
 import React from 'react';
 
 function CustomControls(props) {
+	const handleVolumeChange = (e) => {
+		const { value } = e.target;
+		props.setPlayerVolume(value);
+		props.musicPlaying.current.volume = value / 100;
+	};
+
 	return (
 		<div className="customControls">
 			<i
@@ -41,7 +47,23 @@ function CustomControls(props) {
 				/>
 			</div>
 
-			<i className="fa-regular fa-circle-stop" />
+			{/* <i className="fa-regular fa-circle-stop" /> */}
+			<div className="volumeControl">
+				{props.playerVolume == 0 ? (
+					<i className="fa-solid fa-volume-xmark" />
+				) : (
+					<i className="fa-solid fa-volume-high" />
+				)}
+
+				<input
+					type="range"
+					name="volume"
+					id="volume"
+                    className="volumeBar"
+					value={props.playerVolume}
+					onChange={handleVolumeChange}
+				/>
+			</div>
 		</div>
 	);
 }

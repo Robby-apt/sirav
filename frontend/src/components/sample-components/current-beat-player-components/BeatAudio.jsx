@@ -6,7 +6,7 @@ function BeatAudio(props) {
 			id="beatPlaying"
 			className="beatPlaying"
 			src={props.playingBeat.audio}
-			controls
+			// controls
 			preload="metadata"
 			ref={props.musicPlaying}
             onLoadedMetadata={()=>{

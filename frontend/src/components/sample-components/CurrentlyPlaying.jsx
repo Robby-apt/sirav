@@ -29,6 +29,9 @@ function CurrentlyPlaying(props) {
 	const [beatDuration, setBeatDuration] = useState(0);
 	const [beatCurrentTime, setBeatCurrentTime] = useState(0);
 
+	// state variable for player volume
+	const [playerVolume, setPlayerVolume] = useState(100);
+
 	useEffect(
 		() => {
 			const durationSeconds = Math.ceil(musicPlaying.current.duration);
@@ -42,7 +45,7 @@ function CurrentlyPlaying(props) {
 			);
 
 			setBeatCurrentTime(progressBar.current.value);
-		}
+		},[beatDuration]
 		// ,[
 		// 	musicPlaying?.current?.loadedmetadata,
 		// 	musicPlaying?.current?.readyState,
@@ -100,6 +103,9 @@ function CurrentlyPlaying(props) {
 							<CustomControls
 								isPlaying={props.isPlaying}
 								setPlaying={props.setPlaying}
+								playerVolume={playerVolume}
+								setPlayerVolume={setPlayerVolume}
+                                musicPlaying={musicPlaying}
 								rewindBeat={() =>
 									rewindBeat(musicPlaying.current)
 								}
