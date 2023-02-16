@@ -6,9 +6,7 @@ function SocialIcon(props) {
 			<a href={props.socialLink} target="_blank" rel="noreferrer">
 				<i className={props.icon} />
 			</a>
-			<a href={props.socialLink} target="_blank" rel="noreferrer">
-				{props.userName}
-			</a>
+			<a>{props.userName}</a>
 		</div>
 	);
 }

@@ -23,6 +23,9 @@ function CurrentlyPlaying(props) {
 	// ref for animation on progress bar
 	const animationRef = useRef();
 
+    // ref for volumeBar
+    const volumeBarRef = useRef();
+
 	// console.log(musicPlaying.current.duration);
 
 	// state variables for current time and duration
@@ -114,6 +117,7 @@ function CurrentlyPlaying(props) {
 								playerVolume={playerVolume}
 								setPlayerVolume={setPlayerVolume}
 								musicPlaying={musicPlaying}
+								volumeBarRef={volumeBarRef}
 								rewindBeat={() =>
 									rewindBeat(musicPlaying.current)
 								}

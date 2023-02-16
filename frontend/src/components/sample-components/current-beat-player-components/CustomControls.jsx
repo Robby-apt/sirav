@@ -47,7 +47,6 @@ function CustomControls(props) {
 				/>
 			</div>
 
-			{/* <i className="fa-regular fa-circle-stop" /> */}
 			<div className="volumeControl">
 				{props.playerVolume == 0 ? (
 					<i className="fa-solid fa-volume-xmark" />
@@ -60,6 +59,7 @@ function CustomControls(props) {
 					name="volume"
 					id="volume"
 					className="volumeBar"
+					ref={props.volumeBarRef}
 					value={props.playerVolume}
 					onChange={handleVolumeChange}
 				/>

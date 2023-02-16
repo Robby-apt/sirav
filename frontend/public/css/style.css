@@ -563,18 +563,26 @@ nav {
   display: flex;
   margin: 0 5%;
 }
-.socialMedia .socialIcon i {
+.socialMedia .socialIcon a:first-child {
+  display: flex;
+  margin: auto 1.25rem auto 0;
+  width: 10%;
+}
+.socialMedia .socialIcon a:first-child i {
   color: #2ec4b6;
   font-size: 3.125rem;
+  margin: auto;
 }
 .socialMedia .socialIcon a:not(:first-child) {
   font-size: 2.25rem;
-  margin: auto auto auto 1.25rem;
+  margin: auto auto auto 0;
 }
 
 .contactForm {
   background-color: rgba(46, 196, 182, 0.2);
   display: flex;
+  flex-direction: column;
+  position: relative;
 }
 .contactForm form {
   margin: auto;
@@ -590,11 +598,11 @@ nav {
   margin: 0 !important;
 }
 .contactForm form .inputSection:not(:first-child), .contactForm form .inputSection:not(:last-child) {
-  margin: 0.625rem 0 !important;
+  margin: 0.3125rem 0 !important;
 }
 .contactForm form .inputSection label {
   font-size: 1.25rem;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.3125rem;
 }
 .contactForm form .inputSection input,
 .contactForm form .inputSection textarea {
@@ -766,7 +774,7 @@ footer p a:hover {
     font-size: 2.5rem !important;
   }
   .socialMedia .socialIcon a:not(:first-child) {
-    font-size: 1.5rem !important;
+    font-size: 1.25rem !important;
   }
   .contactForm form {
     width: 85%;

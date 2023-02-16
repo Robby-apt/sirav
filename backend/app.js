@@ -28,18 +28,18 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/', (req, res) => {
-	const { name, email, message } = req.body;
-
+	const { name, email, subject, message } = req.body;
+	console.log(req.body);
 	const mailOptions = {
 		from: process.env.SENDER,
 		to: process.env.RECEIVER,
-		subject: `Message from website contact form`,
+		subject: subject,
 		html: `<h1>${name}</h1>
         <h2>${email}</h2>
         <p>${message}</p>`,
 	};
 
-    transporter.sendMail(mailOptions, (err, info) => {
+	transporter.sendMail(mailOptions, (err, info) => {
 		let output = err || info.response;
 		console.log(output);
 	});

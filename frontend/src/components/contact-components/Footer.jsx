@@ -17,7 +17,7 @@ function Footer() {
 				>
 					Robin
 				</a>
-				{` `}
+				{`. `}
 				All rights reserved &#169; {currentYear}
 			</p>
 		</footer>

@@ -48,15 +48,25 @@
 		display: flex;
 		margin: 0 5%;
 
-		i {
-			color: $secondary-accent-color;
-			font-size: 3.125rem;
+		a {
+			&:first-child {
+				// background-color: aqua;
+				display: flex;
+				margin: auto 1.25rem auto 0;
+				width: 10%;
+
+				i {
+					color: $secondary-accent-color;
+					font-size: 3.125rem;
+					margin: auto;
+				}
+			}
 		}
 
 		a {
 			&:not(:first-child) {
 				font-size: 2.25rem;
-				margin: auto auto auto 1.25rem;
+				margin: auto auto auto 0;
 			}
 		}
 	}
@@ -65,6 +75,8 @@
 .contactForm {
 	background-color: $secondary-color;
 	display: flex;
+	flex-direction: column;
+	position: relative;
 
 	form {
 		// background-color: black;
@@ -84,12 +96,12 @@
 
 			&:not(:first-child),
 			&:not(:last-child) {
-				margin: 0.625rem 0 !important;
+				margin: 0.3125rem 0 !important;
 			}
 
 			label {
 				font-size: 1.25rem;
-				margin-bottom: 0.625rem;
+				margin-bottom: 0.3125rem;
 			}
 
 			input,

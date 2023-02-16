@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+const validator = require('email-validator');
 
 function ContactForm() {
 	const [contactInfo, setContactInfo] = useState({
 		name: ``,
 		email: ``,
+		subject: ``,
 		message: ``,
 	});
 
@@ -17,17 +19,22 @@ function ContactForm() {
 
 	async function handleSubmit(event) {
 		event.preventDefault();
-		let dataBody = JSON.stringify(contactInfo);
 
-		try {
-            const url = `http://localhost:3001`;
-			let res = await fetch(url, {
-				method: 'POST',
-				headers: { 'content-type': 'application/json' },
-				body: dataBody,
-			});
-		} catch (err) {
-			console.log(err);
+		if (validator.validate(contactInfo.email)) {
+			let dataBody = JSON.stringify(contactInfo);
+
+			try {
+				const url = `http://localhost:3001`;
+				let res = await fetch(url, {
+					method: 'POST',
+					headers: { 'content-type': 'application/json' },
+					body: dataBody,
+				});
+			} catch (err) {
+				console.log(err);
+			}
+		} else {
+			alert(`Kindly enter a valid email`);
 		}
 	}
 
@@ -42,6 +49,8 @@ function ContactForm() {
 						id="name"
 						value={contactInfo.name}
 						onChange={handleChange}
+						minlength="2"
+						required
 					/>
 				</div>
 
@@ -53,6 +62,20 @@ function ContactForm() {
 						id="email"
 						value={contactInfo.email}
 						onChange={handleChange}
+						required
+					/>
+				</div>
+
+				<div className="inputSection">
+					<label htmlFor="subject">Subject:</label>
+					<input
+						name="subject"
+						type="text"
+						id="subject"
+						value={contactInfo.subject}
+						onChange={handleChange}
+						minlength="5"
+						required
 					/>
 				</div>
 
@@ -65,6 +88,8 @@ function ContactForm() {
 						rows="10"
 						value={contactInfo.message}
 						onChange={handleChange}
+						minlength="5"
+						required
 					/>
 				</div>
 
