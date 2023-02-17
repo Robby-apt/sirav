@@ -1,5 +1,5 @@
 import React from 'react';
-import Rating from './Rating';
+// import Rating from './Rating';
 
 function BeatItem(props) {
 	return (
@@ -8,7 +8,7 @@ function BeatItem(props) {
 			<img src={props.beat.cover} alt={props.beat.title} />
 			<div className="beatInfo">
 				<p className="beatName">{props.beat.title}</p>
-				<Rating />
+				{/* <Rating /> */}
 			</div>
 			<i
 				className="fa-regular fa-circle-play playBtn"

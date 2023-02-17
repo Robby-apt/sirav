@@ -34,14 +34,15 @@ app.post('/', (req, res) => {
 		from: process.env.SENDER,
 		to: process.env.RECEIVER,
 		subject: subject,
-		html: `<h1>${name}</h1>
-        <h2>${email}</h2>
+		html: `<h1>Message from: ${name}</h1>
+        <h2>Sender's email: ${email}</h2>
         <p>${message}</p>`,
 	};
 
 	transporter.sendMail(mailOptions, (err, info) => {
 		let output = err || info.response;
 		console.log(output);
+		res.send(output);
 	});
 });
 

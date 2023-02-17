@@ -44,7 +44,7 @@
 
 		p {
 			font-size: 1.25rem;
-			margin: 0;
+			margin: 0 auto;
 			padding: 0;
 		}
 
@@ -137,8 +137,8 @@
 				width: 60%;
 			}
 
-            // import volume bar styling
-            @import './volumeBar';
+			// import volume bar styling
+			@import './volumeBar';
 		}
 	}
 }

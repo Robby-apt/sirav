@@ -192,7 +192,7 @@ nav {
 }
 .beatInfoAndControls .beatInfo p {
   font-size: 1.25rem;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 .beatInfoAndControls .beatInfo div {

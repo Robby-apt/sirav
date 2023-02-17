@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function CustomControls(props) {
+	const [previousVolume, setPreviousVolume] = useState();
+
 	const handleVolumeChange = (e) => {
 		const { value } = e.target;
 		props.setPlayerVolume(value);
@@ -49,9 +51,23 @@ function CustomControls(props) {
 
 			<div className="volumeControl">
 				{props.playerVolume == 0 ? (
-					<i className="fa-solid fa-volume-xmark" />
+					<i
+						className="fa-solid fa-volume-xmark"
+						onClick={() => {
+							props.setPlayerVolume(previousVolume);
+							props.volumeBarRef.current.value = previousVolume;
+							props.musicPlaying.current.volume = previousVolume / 100;
+						}}
+					/>
 				) : (
-					<i className="fa-solid fa-volume-high" />
+					<i
+						className="fa-solid fa-volume-high"
+						onClick={() => {
+							setPreviousVolume(props.volumeBarRef.current.value);
+							props.setPlayerVolume(0);
+							props.musicPlaying.current.volume = 0;
+						}}
+					/>
 				)}
 
 				<input

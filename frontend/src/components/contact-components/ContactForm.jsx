@@ -30,6 +30,21 @@ function ContactForm() {
 					headers: { 'content-type': 'application/json' },
 					body: dataBody,
 				});
+				// get status code
+				if (res.status == 200) {
+					alert(`The message has been sent successfully`);
+					setContactInfo({
+						name: ``,
+						email: ``,
+						subject: ``,
+						message: ``,
+					});
+                    console.log(contactInfo);
+				} else {
+					alert(
+						`Sorry, something went wrong when sending the message`
+					);
+				}
 			} catch (err) {
 				console.log(err);
 			}
