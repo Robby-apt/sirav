@@ -732,7 +732,7 @@ footer p a:hover {
   .otherBeats {
     margin: 0 auto;
     width: 70vw;
-    min-width: 450px;
+    min-width: 375px;
   }
   .currentlyPlaying {
     height: 80vh;
@@ -754,7 +754,7 @@ footer p a:hover {
   }
   .contactInfo {
     width: 70vw;
-    min-width: 450px;
+    min-width: 375px;
   }
 }
 @media (max-width: 1174px) {
