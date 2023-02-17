@@ -1,4 +1,13 @@
 // first breakpoint
+@media (max-width: 500px) {
+	.currentlyPlaying,
+	.otherBeats,
+	.contactInfo {
+		width: 100% !important;
+	}
+}
+
+// second breakpoint
 @media (max-width: 640px) {
 	// home section
 	nav {
@@ -40,7 +49,7 @@
 	}
 }
 
-// second breakpoint
+// third breakpoint
 @media (max-width: 960px) {
 	// sample section
 	.beatInfoAndControls {
@@ -110,7 +119,7 @@
 	}
 }
 
-// third breakpoint
+// fourth breakpoint
 @media (max-width: 1048px) {
 	#sample {
 		flex-direction: column;
@@ -154,7 +163,7 @@
 	}
 }
 
-// fourth breakpoint
+// fifth breakpoint
 @media (max-width: 1174px) {
 	// home section
 	.sublime {
@@ -215,7 +224,7 @@
 	}
 }
 
-// fifth breakpoint
+// sixth breakpoint
 @media (max-width: 1630px) {
 	// sample section
 	.beatInfoAndControls {

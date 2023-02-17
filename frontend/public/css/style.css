@@ -649,6 +649,13 @@ footer p a:hover {
   text-decoration: underline;
 }
 
+@media (max-width: 500px) {
+  .currentlyPlaying,
+  .otherBeats,
+  .contactInfo {
+    width: 100% !important;
+  }
+}
 @media (max-width: 640px) {
   nav {
     position: relative;
