@@ -209,13 +209,11 @@ nav {
   display: flex;
   justify-content: space-between;
   /* progress bar - safari */
-  /* progress bar - firefox */
   /* progress bar - chrome and safari */
   /* progress bar - firefox */
   /* knobby - chrome and safari */
-  /* knobby while dragging - chrome and safari */
   /* knobby - firefox */
-  /* knobby while dragging - firefox */
+  /* knobby while dragging - chrome and safari */
 }
 .beatInfoAndControls .progress .progressBar {
   -webkit-appearance: none;
@@ -234,17 +232,10 @@ nav {
   --knobby: $secondary-accent-color;
   --selectedKnobby: $secondary-accent-color;
 }
-.beatInfoAndControls .progress .progressBar::-webkit-slider-runnable-track {
-  background-color: #fff;
-  border-radius: 0.625rem;
-  position: relative;
-  width: 100%;
-  height: 0.3125rem;
-  outline: none;
-}
+.beatInfoAndControls .progress .progressBar::-webkit-slider-runnable-track,
 .beatInfoAndControls .progress .progressBar::-moz-range-track {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   position: relative;
   width: 100%;
   height: 0.3125rem;
@@ -281,13 +272,8 @@ nav {
   background-color: #2ec4b6;
   cursor: pointer;
   position: relative;
-  margin: -2px 0 0 0;
   z-index: 3;
   box-sizing: border-box;
-}
-.beatInfoAndControls .progress .progressBar:active::-webkit-slider-thumb {
-  transform: scale(1.2);
-  background-color: #2ec4b6;
 }
 .beatInfoAndControls .progress .progressBar::-moz-range-thumb {
   height: 15px;
@@ -300,6 +286,7 @@ nav {
   z-index: 3;
   box-sizing: border-box;
 }
+.beatInfoAndControls .progress .progressBar:active::-webkit-slider-thumb,
 .beatInfoAndControls .progress .progressBar:active::-moz-range-thumb {
   transform: scale(1.2);
   background-color: #2ec4b6;
@@ -352,13 +339,11 @@ nav {
   width: 20%;
   min-width: 100px;
   /* progress bar - safari */
-  /* progress bar - firefox */
   /* progress bar - chrome and safari */
   /* progress bar - firefox */
   /* knobby - chrome and safari */
   /* knobby while dragging - chrome and safari */
   /* knobby - firefox */
-  /* knobby while dragging - firefox */
 }
 .beatInfoAndControls .customControls .volumeControl i {
   margin: auto 1.25rem auto 0;
@@ -384,17 +369,10 @@ nav {
   --knobby: $secondary-accent-color;
   --selectedKnobby: $secondary-accent-color;
 }
-.beatInfoAndControls .customControls .volumeControl .volumeBar::-webkit-slider-runnable-track {
-  background-color: #fff;
-  border-radius: 0.625rem;
-  position: relative;
-  width: 100%;
-  height: 0.3125rem;
-  outline: none;
-}
+.beatInfoAndControls .customControls .volumeControl .volumeBar::-webkit-slider-runnable-track,
 .beatInfoAndControls .customControls .volumeControl .volumeBar::-moz-range-track {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   position: relative;
   width: 100%;
   height: 0.3125rem;
@@ -431,11 +409,11 @@ nav {
   background-color: #2ec4b6;
   cursor: pointer;
   position: relative;
-  margin: -2px 0 0 0;
   z-index: 3;
   box-sizing: border-box;
 }
-.beatInfoAndControls .customControls .volumeControl .volumeBar:active::-webkit-slider-thumb {
+.beatInfoAndControls .customControls .volumeControl .volumeBar:active::-webkit-slider-thumb,
+.beatInfoAndControls .customControls .volumeControl .volumeBar:active::-moz-range-thumb {
   transform: scale(1.2);
   background-color: #2ec4b6;
 }
@@ -449,10 +427,6 @@ nav {
   position: relative;
   z-index: 3;
   box-sizing: border-box;
-}
-.beatInfoAndControls .customControls .volumeControl .volumeBar:active::-moz-range-thumb {
-  transform: scale(1.2);
-  background-color: #2ec4b6;
 }
 
 .otherBeats {

@@ -4,6 +4,7 @@ He produces music of different genres
 ## Tools used
 ### Frontend
 - React
+- SCSS
 - Fontawesome icons
 
 ### Backend
