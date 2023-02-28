@@ -33,17 +33,17 @@
 
 /* progress bar - chrome and safari */
 .volumeBar::before {
-	content: '';
-	height: 0.3125rem;
-	// width: var(--seek-before-width);
 	background-color: $secondary-accent-color;
 	border-top-left-radius: 0.625rem;
 	border-bottom-left-radius: 0.625rem;
+	content: '';
+	cursor: pointer;
+	height: 0.3125rem;
+	width: var(--seek-before-width);
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 2;
-	cursor: pointer;
 }
 
 /* progress bar - firefox */
@@ -58,35 +58,34 @@
 .volumeBar::-webkit-slider-thumb {
 	appearance: none;
 	-webkit-appearance: none;
-	height: 15px;
-	width: 15px;
-	border-radius: 50%;
-	border: none;
 	background-color: $secondary-accent-color;
+	border-radius: 50%;
+	border: transparent;
+	box-sizing: border-box;
 	cursor: pointer;
 	position: relative;
-	// margin: -2px 0 0 0;
 	z-index: 3;
+	height: 0.9375rem;
+	width: 0.9375rem;
+}
+
+/* knobby - firefox */
+.volumeBar::-moz-range-thumb {
+	background-color: $secondary-accent-color;
+	border-radius: 50%;
+	border: transparent;
 	box-sizing: border-box;
+	cursor: pointer;
+	position: relative;
+	z-index: 3;
+	height: 0.9375rem;
+	width: 0.9375rem;
 }
 
 /* knobby while dragging - chrome and safari */
 .volumeBar:active::-webkit-slider-thumb,
 /* knobby while dragging - firefox */
-.volumeBar:active::-moz-range-thumb  {
+.volumeBar:active::-moz-range-thumb {
 	transform: scale(1.2);
 	background-color: $secondary-accent-color;
-}
-
-/* knobby - firefox */
-.volumeBar::-moz-range-thumb {
-	height: 15px;
-	width: 15px;
-	border-radius: 50%;
-	border: transparent;
-	background-color: $secondary-accent-color;
-	cursor: pointer;
-	position: relative;
-	z-index: 3;
-	box-sizing: border-box;
 }

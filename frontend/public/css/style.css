@@ -265,8 +265,8 @@ nav {
 .beatInfoAndControls .progress .progressBar::-webkit-slider-thumb {
   appearance: none;
   -webkit-appearance: none;
-  height: 15px;
-  width: 15px;
+  height: 0.9375rem;
+  width: 0.9375rem;
   border-radius: 50%;
   border: none;
   background-color: #2ec4b6;
@@ -276,8 +276,8 @@ nav {
   box-sizing: border-box;
 }
 .beatInfoAndControls .progress .progressBar::-moz-range-thumb {
-  height: 15px;
-  width: 15px;
+  height: 0.9375rem;
+  width: 0.9375rem;
   border-radius: 50%;
   border: transparent;
   background-color: #2ec4b6;
@@ -342,8 +342,8 @@ nav {
   /* progress bar - chrome and safari */
   /* progress bar - firefox */
   /* knobby - chrome and safari */
-  /* knobby while dragging - chrome and safari */
   /* knobby - firefox */
+  /* knobby while dragging - chrome and safari */
 }
 .beatInfoAndControls .customControls .volumeControl i {
   margin: auto 1.25rem auto 0;
@@ -382,16 +382,17 @@ nav {
   border: 0;
 }
 .beatInfoAndControls .customControls .volumeControl .volumeBar::before {
-  content: "";
-  height: 0.3125rem;
   background-color: #2ec4b6;
   border-top-left-radius: 0.625rem;
   border-bottom-left-radius: 0.625rem;
+  content: "";
+  cursor: pointer;
+  height: 0.3125rem;
+  width: var(--seek-before-width);
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
-  cursor: pointer;
 }
 .beatInfoAndControls .customControls .volumeControl .volumeBar::-moz-range-progress {
   background-color: #2ec4b6;
@@ -402,31 +403,31 @@ nav {
 .beatInfoAndControls .customControls .volumeControl .volumeBar::-webkit-slider-thumb {
   appearance: none;
   -webkit-appearance: none;
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  border: none;
   background-color: #2ec4b6;
+  border-radius: 50%;
+  border: transparent;
+  box-sizing: border-box;
   cursor: pointer;
   position: relative;
   z-index: 3;
+  height: 0.9375rem;
+  width: 0.9375rem;
+}
+.beatInfoAndControls .customControls .volumeControl .volumeBar::-moz-range-thumb {
+  background-color: #2ec4b6;
+  border-radius: 50%;
+  border: transparent;
   box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  height: 0.9375rem;
+  width: 0.9375rem;
 }
 .beatInfoAndControls .customControls .volumeControl .volumeBar:active::-webkit-slider-thumb,
 .beatInfoAndControls .customControls .volumeControl .volumeBar:active::-moz-range-thumb {
   transform: scale(1.2);
   background-color: #2ec4b6;
-}
-.beatInfoAndControls .customControls .volumeControl .volumeBar::-moz-range-thumb {
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  border: transparent;
-  background-color: #2ec4b6;
-  cursor: pointer;
-  position: relative;
-  z-index: 3;
-  box-sizing: border-box;
 }
 
 .otherBeats {

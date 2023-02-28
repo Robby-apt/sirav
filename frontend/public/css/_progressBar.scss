@@ -63,8 +63,8 @@
 	.progressBar::-webkit-slider-thumb {
 		appearance: none;
 		-webkit-appearance: none;
-		height: 15px;
-		width: 15px;
+		height: 0.9375rem;
+		width: 0.9375rem;
 		border-radius: 50%;
 		border: none;
 		background-color: $secondary-accent-color;
@@ -77,8 +77,8 @@
 
 	/* knobby - firefox */
 	.progressBar::-moz-range-thumb {
-		height: 15px;
-		width: 15px;
+		height: 0.9375rem;
+		width: 0.9375rem;
 		border-radius: 50%;
 		border: transparent;
 		background-color: $secondary-accent-color;

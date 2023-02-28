@@ -56,7 +56,8 @@ function CustomControls(props) {
 						onClick={() => {
 							props.setPlayerVolume(previousVolume);
 							props.volumeBarRef.current.value = previousVolume;
-							props.musicPlaying.current.volume = previousVolume / 100;
+							props.musicPlaying.current.volume =
+								previousVolume / 100;
 						}}
 					/>
 				) : (
