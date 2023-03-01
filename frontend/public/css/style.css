@@ -170,7 +170,7 @@ nav {
   display: flex;
   margin: auto auto 5%;
   width: 94%;
-  height: 94vh;
+  height: 94%;
 }
 .currentlyPlaying .mediaSection .mediaOverlay {
   background-color: rgba(0, 0, 0, 0.6);
