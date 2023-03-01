@@ -17,8 +17,8 @@
 
 /* progress bar - safari */
 .volumeBar::-webkit-slider-runnable-track,
-/* progress bar - firefox */
-.volumeBar::-moz-range-track {
+    /* progress bar - firefox */
+    .volumeBar::-moz-range-track {
 	background-color: $primary-color;
 	border-radius: 0.625rem;
 	position: relative;
@@ -33,6 +33,7 @@
 
 /* progress bar - chrome and safari */
 .volumeBar::before {
+	// .volumeBar::after {
 	background-color: $secondary-accent-color;
 	border-top-left-radius: 0.625rem;
 	border-bottom-left-radius: 0.625rem;
@@ -84,8 +85,8 @@
 
 /* knobby while dragging - chrome and safari */
 .volumeBar:active::-webkit-slider-thumb,
-/* knobby while dragging - firefox */
-.volumeBar:active::-moz-range-thumb {
+    /* knobby while dragging - firefox */
+    .volumeBar:active::-moz-range-thumb {
 	transform: scale(1.2);
 	background-color: $secondary-accent-color;
 }

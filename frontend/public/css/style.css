@@ -349,10 +349,6 @@ nav {
 .beatInfoAndControls .customControls .volumeControl i {
   margin: auto 1.25rem auto 0;
 }
-.beatInfoAndControls .customControls .volumeControl input {
-  margin: auto 0 auto auto;
-  width: 60%;
-}
 .beatInfoAndControls .customControls .volumeControl .volumeBar {
   -webkit-appearance: none;
      -moz-appearance: none;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function CustomControls(props) {
 	const [previousVolume, setPreviousVolume] = useState();
@@ -8,6 +8,13 @@ function CustomControls(props) {
 		props.setPlayerVolume(value);
 		props.musicPlaying.current.volume = value / 100;
 	};
+
+	useEffect(() => {
+		props.volumeBarRef.current.style.setProperty(
+			`--seek-before-width`,
+			`${props.volumeBarRef.current.value}%`
+		);
+	}, [props.playerVolume]);
 
 	return (
 		<div className="customControls">
