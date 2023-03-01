@@ -227,7 +227,7 @@ nav {
   height: 0.25rem;
   outline: none;
   --bar-bg: $primary-color;
-  --seek-before-width: 0;
+  --seek-before-width: 100%;
   --seek-before-color: $secondary-accent-color;
   --knobby: $secondary-accent-color;
   --selectedKnobby: $secondary-accent-color;
@@ -245,16 +245,17 @@ nav {
   border: 0;
 }
 .beatInfoAndControls .progress .progressBar::before {
-  content: "";
-  height: 0.3125rem;
   background-color: #2ec4b6;
   border-top-left-radius: 0.625rem;
   border-bottom-left-radius: 0.625rem;
+  content: "";
+  cursor: pointer;
+  height: 0.3125rem;
+  width: var(--seek-before-width);
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
-  cursor: pointer;
 }
 .beatInfoAndControls .progress .progressBar::-moz-range-progress {
   background-color: #2ec4b6;
@@ -364,7 +365,7 @@ nav {
   height: 0.25rem;
   outline: none;
   --bar-bg: $primary-color;
-  --seek-before-width: 0;
+  --seek-before-width: 100%;
   --seek-before-color: $secondary-accent-color;
   --knobby: $secondary-accent-color;
   --selectedKnobby: $secondary-accent-color;
