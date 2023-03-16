@@ -11,7 +11,7 @@ function Footer() {
 				Designed by{` `}
 				<a
 					className="promoLink"
-					href="https://robby-apt.github.io/Personal-website/"
+					href="https://robin-khaoya.dev"
 					target="_blank"
 					rel="noreferrer"
 				>
